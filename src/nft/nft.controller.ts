@@ -7,8 +7,10 @@ import { NftEntity } from './nft.entity';
 import { Nft } from "../interfaces/nft.interface";
 import {Request} from "express";
 import { Pagination } from 'nestjs-typeorm-paginate';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('nft')
+@ApiTags('nfts')
+@Controller('nfts')
 export class NftController {
 
     constructor(private readonly nftService: NftService) {}
